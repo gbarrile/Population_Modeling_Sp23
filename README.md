@@ -47,7 +47,7 @@ Simply click the **Code** dropdown button at the top-right of this page (scroll 
 
 ## Acknowledgments
 
-This course was made possible through the University of Wyoming. A huge thank you to Jerod Merkle in the Zoology and Physiology Department for supporting this course. 
+This graduate course is offered through the University of Wyoming. A huge thank you to Jerod Merkle in the Zoology and Physiology Department for supporting this effort. 
 
 
 ---
