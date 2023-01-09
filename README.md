@@ -11,35 +11,11 @@ Please email **gbarrile@uwyo.edu** with any questions, comments, or requests.
   
 ## Video Lessons
 
-### Full playlist
-[Start Course](https://www.youtube.com/watch?v=5ObFFRI2xoo&list=PLWGk3h2cQBvKeYyRk5lg_5KU9vLNHLC2U) 
+### January 17
+[Course Introduction](https://www.youtube.com/watch?v=5ObFFRI2xoo&list=PLWGk3h2cQBvKeYyRk5lg_5KU9vLNHLC2U) 
   
-### By topic
-[Course Overview](https://www.youtube.com/watch?v=5ObFFRI2xoo)
-
-[Introduction to Population Analysis](https://www.youtube.com/watch?v=IwpAjLwmy7U) 
-
+### January 19
 [Abundance: Closed Binomial N-mixture Model in unmarked](https://www.youtube.com/watch?v=J7NOK0Chibk) 
-
-[Abundance: Closed Binomial N-mixture Model in rjags](https://www.youtube.com/watch?v=FCWAUiPMgYQ) 
-
-[Abundance: Closed Population Estimation in RMark](https://www.youtube.com/watch?v=f7mOtAgtU6I) 
-
-[Abundance: Open Binomial N-mixture Model in unmarked](https://www.youtube.com/watch?v=Xcxrxja8Y4E) 
-
-[Occupancy: Single-Season Occupancy Model in unmarked](https://www.youtube.com/watch?v=o1m6kSs8d30) 
-
-[Occupancy: Single-Season Occupancy Model in rjags](https://www.youtube.com/watch?v=eje-_m47Md0) 
-
-[Occupancy: Multi-Season Occupancy Model in RMark](https://www.youtube.com/watch?v=11nDOiXXvVs) 
-
-[Survival: Cormack-Jolly-Seber Model in RMark](https://www.youtube.com/watch?v=clrarHl9Vp0) 
-
-[Recruitment: Robust Design Pradel Model in RMark](https://www.youtube.com/watch?v=mOII9_whEH4) 
-
-[Dispersal: Robust Design Multi-state Model in RMark](https://www.youtube.com/watch?v=YUmt5YlgYhM)
-
-[Highlighting Underrepresented Works in Population Ecology and Analysis](https://www.youtube.com/watch?v=-mkVZDw4cdY)
 
 ---
 
@@ -49,17 +25,17 @@ Download and install the following programs for your platform:
 
 [R](https://cran.r-project.org/) and [RStudio Desktop](http://www.rstudio.com/ide/download/)
 
-[Program MARK](http://www.phidot.org/software/mark/downloads/) and [JAGS](https://sourceforge.net/projects/mcmc-jags/files/JAGS/4.x/)
+[Program MARK](http://www.phidot.org/software/mark/downloads/)
 
 ### Installing packages
 Once you have R and RStudio set up on your device, install the following packages via pasting these commands into your prompt (i.e., copy and paste the code into the "Console" of RStudio and hit enter):
 
 ```coffee
 install.packages("unmarked")
-install.packages("rjags")
-install.packages("RMark")
+install.packages("tidyverse")
 install.packages("reshape")
 install.packages("ggplot2")
+install.packages("RMark") # you need Program MARK installed on your computer first
 ```
 
 ### Downloading code/data from this repository 
@@ -69,7 +45,7 @@ Simply click the **Code** dropdown button at the top-right of this page (scroll 
 
 ## Acknowledgments
 
-This course was made possible through the funding of Wyoming NSF EPSCoR via the Microbial Ecology Collaborative. A huge thank you also to Western EcoSystems Technology, Inc. (WEST) and the University of Wyoming for hosting and supporting this project. Special thanks to Andrew Tredennick of WEST for supervision and feedback on each lesson and analysis. 
+This course was made possible through the University of Wyoming. A huge thank you to Jerod Merkle in the Zoology and Physiology Department for supporting this course. 
 
 
 ---
