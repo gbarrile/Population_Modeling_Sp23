@@ -17,7 +17,7 @@ Please email **gbarrile@uwyo.edu** with any questions, comments, or requests.
 [Course Introduction](https://www.youtube.com/watch?v=5ObFFRI2xoo&list=PLWGk3h2cQBvKeYyRk5lg_5KU9vLNHLC2U) 
   
 ### January 19
-[Abundance: Closed Binomial N-mixture Model in unmarked](https://www.youtube.com/watch?v=J7NOK0Chibk) 
+Abundance: Closed Binomial N-mixture Model in unmarked
 
 ---
 
@@ -35,7 +35,6 @@ Once you have R and RStudio set up on your device, install the following package
 ```coffee
 install.packages("unmarked")
 install.packages("tidyverse")
-install.packages("reshape")
 install.packages("ggplot2")
 install.packages("RMark") # you need Program MARK installed on your computer first
 ```
