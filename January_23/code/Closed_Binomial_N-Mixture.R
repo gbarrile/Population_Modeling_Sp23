@@ -69,14 +69,11 @@ citation("unmarked")
 # ---- 2) Read-in input data -----
 #%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%#
 
-# Specify the path that contains the salamander count data (Salamander_Wildfire.csv) 
-# use setwd()
+getwd()
 
 # read-in the salamander count data
-# df <- read.csv("Session1-NMixture/data/Salamander_Wildfire.csv") # when github
+df <- read.csv("January_23/data/Salamander_Wildfire.csv")
 
-setwd("G:/Shared drives/wyo-coop-barrile/Boreal_Toad_Project/RS/Population_Modeling_Sp23/Week_1_Closed_Binomial_N-Mixture/data")
-df <- read.csv("Salamander_Wildfire.csv")
 
 # We now have our data stored as 'df'
 # check out our data
@@ -104,7 +101,7 @@ df %>%
 df <- df %>% arrange(Transect, Survey)
 df
 
-# now format count data for unmarked
+# now format count data for unmarked (pivot data from long format to wide format)
 
 # IF YOU WANT TO FORMAT DATA USING THE 'reshape' PACKAGE
 # m <- melt(df, id.var = c("Transect","Survey"), measure.var = "Count")
@@ -112,15 +109,16 @@ df
 # K <- ncol(y)
 # C <- as.matrix(y[,2:K])
 
+
 # IF YOU WANT TO FORMAT DATA USING tidyr and dplyr
 
 # reduce dataframe to columns that we need
 m <- df %>% select(Transect, Survey, Count)
-# make Transect a factor variable (possibly unnecessary but probably good practice)
+# make Transect a factor variable
 m$Transect <- as.factor(as.character(m$Transect))
-
 # pivot data to wide format
 y <- m %>% pivot_wider(names_from = Survey, values_from = Count, values_fill = NA)
+# look at resulting dataframe
 y
 
 # unmarked only wants a matrix of counts
@@ -151,7 +149,7 @@ C
 
 # Site-level covariates versus Observational covariates
 
-# Site covariates do not change during each survey at a given site
+# Site covariates do not change in value across surveys at a given site
 # i.e., one value for a site covariate at each transect
 # e.g., ten values for percent burned area, one value for each transect 
 
@@ -161,7 +159,7 @@ C
 # then the percent burned area also cannot change over our three surveys at that
 # given transect
 
-# Observation covariates can change during each survey at a given site
+# Observation covariates can change across each survey at a given site
 # Observation covariate data should match survey data (i.e., matrix of counts)
 # We can have a different detection probability for each survey
 # e.g., different time of day for each survey.
@@ -198,11 +196,11 @@ burned
 
 # reduce dataframe to columns that we need
 m <- df %>% select(Transect, Survey, Time)
-# make Transect a factor variable (possibly unnecessary but probably good practice)
+# make Transect a factor variable
 m$Transect <- as.factor(as.character(m$Transect))
-
 # pivot data to wide format
 y <- m %>% pivot_wider(names_from = Survey, values_from = Time, values_fill = NA)
+# check out resulting dataframe
 y
 
 # unmarked only wants a matrix of counts
@@ -221,7 +219,7 @@ time
 #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 # remove objects that we don't need
-rm(m,y,K)
+rm(m,y)
 
 # Here are the data for analysis:
 C      # matrix of survey data (salamander counts)
@@ -473,11 +471,9 @@ library(raster)
 # or 'Area' in your unmarked dataframe as a site-level covariate.
 
 # Load the burned severity raster of our study area
-fire <- raster("Session1-NMixture/data/BurnSeverity.tif")
+fire <- raster("January_23/data/BurnSeverity.tif")
 
-library(raster)
 
-fire <- raster("BurnSeverity.tif")
 mapPalette <- colorRampPalette(c("grey", "yellow", "orange", "red"))
 plot(fire, col = mapPalette(100), axes = F, box = F, main = "% Burned Area")
 res(fire) # 30 m x 30 m resolution (grid size)
@@ -541,10 +537,9 @@ m2 <- pcount(~time ~burned + offset(log(Area)), data=umf, K=130)
 # offset variable to be logged before inclusion in the model.
 
 # Load the burned severity raster of our study area
-fire <- raster("Session1-NMixture/data/BurnSeverity.tif")
+fire <- raster("January_23/data/BurnSeverity.tif")
 
-fire <- raster("BurnSeverity.tif")
-
+# plot raster layer
 mapPalette <- colorRampPalette(c("grey", "yellow", "orange", "red"))
 par(mfrow = c(1,1), mar = c(1,2,2,5))
 plot(fire, col = mapPalette(100), axes = F, box = F, main = "% Burned Area")
