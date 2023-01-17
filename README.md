@@ -14,7 +14,7 @@ Please email **gbarrile@uwyo.edu** with any questions, comments, or requests.
 ## Video Lessons
 
 ### January 17
-Course Introduction
+[Course Introduction](https://www.youtube.com/watch?v=RXtEqS-WVo4)
   
 ### January 19
 Abundance: Closed Binomial N-mixture Model in unmarked
