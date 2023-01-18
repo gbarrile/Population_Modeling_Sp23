@@ -116,6 +116,8 @@ df
 m <- df %>% select(Transect, Survey, Count)
 # make Transect a factor variable
 m$Transect <- as.factor(as.character(m$Transect))
+# order the data frame by Survey
+m <- m %>% arrange(Survey)
 # pivot data to wide format
 y <- m %>% pivot_wider(names_from = Survey, values_from = Count, values_fill = NA)
 # look at resulting dataframe
@@ -198,6 +200,8 @@ burned
 m <- df %>% select(Transect, Survey, Time)
 # make Transect a factor variable
 m$Transect <- as.factor(as.character(m$Transect))
+# order the data frame by Survey
+m <- m %>% arrange(Survey)
 # pivot data to wide format
 y <- m %>% pivot_wider(names_from = Survey, values_from = Time, values_fill = NA)
 # check out resulting dataframe
