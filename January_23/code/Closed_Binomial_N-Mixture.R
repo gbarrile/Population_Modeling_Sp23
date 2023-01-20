@@ -457,9 +457,10 @@ library(raster)
 # When we predict to the raster surface (in the below code), we are assuming that the
 # area of each raster cell is equivalent to the area surveyed at each transect.
 # Each raster cell is a 30 meter by 30 meter square, so we are assuming that area
-# was equivalent to the area surveyed at each transect. This is just for illustrative
-# purposes, as it is unlikely that our transect area matches the raster cell size.
-# So in practice, we should make sure that, when predicting from the model,
+# was equivalent to the area surveyed at each transect. However, it is highly unlikely 
+# that our transect area matches the raster cell size.
+
+# Thus, we need to make sure that, when predicting from the model,
 # that we are predicting the number of individuals to the correct per unit area.
 # One way to accomplish this would be to include the size/area of our sampling
 # area by adding an offset term to the right-hand side of the abundance formula (as shown below).
@@ -473,41 +474,6 @@ library(raster)
 
 # In the two example models above, you would simply code/include 'TransectLength'
 # or 'Area' in your unmarked dataframe as a site-level covariate.
-
-# Load the burned severity raster of our study area
-fire <- raster("January_23/data/BurnSeverity.tif")
-
-
-mapPalette <- colorRampPalette(c("grey", "yellow", "orange", "red"))
-plot(fire, col = mapPalette(100), axes = F, box = F, main = "% Burned Area")
-res(fire) # 30 m x 30 m resolution (grid size)
-# crs(fire)
-CH <- as.data.frame(fire, xy=TRUE)
-CH <- data.frame(x = CH$x, y = CH$y, burned = CH$BurnSeverity)
-
-# Get predictions of abundance for each 30 m x 30 m cell of study area
-newData <- data.frame(burned = CH$burned) # would need sampling area in this data frame (see note above)!!!
-predCH <- predict(m2, type="state", newdata=newData)
-
-# Define new data frame with coordinates and outcome to be plotted
-PARAM <- data.frame(x = CH$x, y = CH$y, z = predCH$Predicted)
-r1 <- rasterFromXYZ(PARAM)     # convert into raster object
-
-# Plot predicted salamander abundance in study area (based on model m2)
-par(mfrow = c(1,1), mar = c(1,2,2,5))
-mapPalette <- colorRampPalette(c("grey", "yellow", "orange", "red"))
-plot(r1, col = mapPalette(100), axes = F, box = F, main = "Salamander abundance (mean predicted values)")
-
-# Plot predicted salamander abundance in study area (based on model m2)
-par(mfrow = c(1,2))
-mapPalette <- colorRampPalette(c("grey", "yellow", "orange", "red"))
-plot(r1, col = mapPalette(100), axes = F, box = F, main = "Salamander abundance")
-plot(fire, col = mapPalette(100), axes = F, box = F, main = "% Burned Area")
-
-
-
-
-
 
 
 # Now let's predict back to the landscape, accounting for differences in sampling area
@@ -540,6 +506,16 @@ m2 <- pcount(~time ~burned + offset(log(Area)), data=umf, K=130)
 # as the linear predictor. In the case of a log link model, this requires the 
 # offset variable to be logged before inclusion in the model.
 
+# Another point to be noted: When using an offset, the assumption is made that 
+# doubling the unit size (e.e., area) will lead to a doubling of the count outcome. 
+# If this assumption is not appropriate, then controlling for the unit size as 
+# a covariate instead of an offset may be more appropriate. In other words,
+# it could also be worth putting log(area) in as a covariate, i.e.,
+# allowing for the estimation of its coefficient. If the estimated
+# coefficient is very different from 1 then it suggests the effort per
+# unit area was not proportional and you should use the covariate model
+# instead of the offset.
+
 # Load the burned severity raster of our study area
 fire <- raster("January_23/data/BurnSeverity.tif")
 
@@ -571,6 +547,49 @@ par(mfrow = c(1,2))
 mapPalette <- colorRampPalette(c("grey", "yellow", "orange", "red"))
 plot(r1, col = mapPalette(100), axes = F, box = F, main = "Salamander abundance")
 plot(fire, col = mapPalette(100), axes = F, box = F, main = "% Burned Area")
+
+
+
+# if you use the sp and raster packages for spatial data, it has been suggested
+# that users switch to the sf and terra packages
+
+# So, let's predict back to the landscape again, but using terra instead of raster
+library(terra)
+
+# Load the burned severity raster of our study area
+fire <- rast("January_23/data/BurnSeverity.tif")
+
+# plot raster layer
+mapPalette <- colorRampPalette(c("grey", "yellow", "orange", "red"))
+par(mfrow = c(1,1), mar = c(1,2,2,5))
+plot(fire, col = mapPalette(100), axes = F, main = "% Burned Area")
+res(fire) # 30 m x 30 m resolution (grid size)
+
+# create dataframe from raster
+CH <- as.data.frame(fire, xy=TRUE)
+CH <- data.frame(x = CH$x, y = CH$y, burned = CH$BurnSeverity)
+
+# Get predictions of abundance for each 30 m x 30 m cell of study area
+newData <- data.frame(burned = CH$burned)
+newData$Area <- 900 # because each raster cell in 30 m x 30 m so has area of 900m2
+predCH <- predict(m2, type="state", newdata=newData)
+
+# Define new data frame with coordinates and outcome to be plotted
+PARAM <- data.frame(x = CH$x, y = CH$y, z = predCH$Predicted)
+r1 <- rast(PARAM, type = "xyz")     # convert into raster object
+
+# Plot predicted salamander abundance in study area (based on model m2)
+par(mfrow = c(1,1), mar = c(1,2,2,5))
+mapPalette <- colorRampPalette(c("grey", "yellow", "orange", "red"))
+plot(r1, col = mapPalette(100), axes = F, main = "Salamander abundance (mean predicted values)")
+
+# Plot predicted salamander abundance in study area (based on model m2)
+par(mfrow = c(1,2))
+mapPalette <- colorRampPalette(c("grey", "yellow", "orange", "red"))
+plot(r1, col = mapPalette(100), axes = F, main = "Salamander abundance")
+plot(fire, col = mapPalette(100), axes = F, main = "% Burned Area")
+
+
 
 
 
