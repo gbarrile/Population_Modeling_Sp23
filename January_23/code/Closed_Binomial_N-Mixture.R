@@ -437,7 +437,21 @@ m4 <- pcount(~time ~burned, data=umf, mixture="ZIP", K=130)
 #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 # Compare models using AIC
 cbind(AIC.P=m2@AIC, AIC.NB=m3@AIC, AIC.ZIP=m4@AIC)
-# QUESTION: Poisson has lowest AIC. Why might this be? Discuss with the group.
+# QUESTION: Poisson has lowest AIC. Why might this be?
+
+# Note: Poisson distribution assumes that mean is equal to its variance
+# Negative binomial distribution allows the variance to be greater than the mean, with
+# the amount of overdispersion determined by an additional parameter
+# Negative binomial can have a very long right tail, and its mean to variance ratio
+# may not be ideal in certain cases. An alternative is to consider zero-inflated distributions,
+# such as the zero-inflated Poisson. 
+
+# Poisson having the lowest AIC likely indicates it that the variance did scale
+# with the mean and that there was little to no overdispersion. Thus, the extra
+# parameter in the negative binomial was not worth it. Also, we likely don't have more 
+# zeros in our data than expected by the Poisson, so the extra parameters in the 
+# zero-inflated Poisson also was not worth it.
+
 #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 
