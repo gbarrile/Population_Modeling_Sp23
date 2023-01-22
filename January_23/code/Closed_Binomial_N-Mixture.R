@@ -69,7 +69,8 @@ citation("unmarked")
 # ---- 2) Read-in input data -----
 #%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%#
 
-getwd()
+# you will need to set your working directory to wherever you saved the Salamander_Wildfire.csv 
+setwd()
 
 # read-in the salamander count data
 df <- read.csv("January_23/data/Salamander_Wildfire.csv")
@@ -119,7 +120,7 @@ m$Transect <- as.factor(as.character(m$Transect))
 # order the data frame by Survey
 m <- m %>% arrange(Survey)
 # pivot data to wide format
-y <- m %>% pivot_wider(names_from = Survey, values_from = Count, values_fill = NA)
+y <- m %>% pivot_wider(id_cols = Transect, names_from = Survey, values_from = Count, values_fill = NA)
 # look at resulting dataframe
 y
 
@@ -203,7 +204,7 @@ m$Transect <- as.factor(as.character(m$Transect))
 # order the data frame by Survey
 m <- m %>% arrange(Survey)
 # pivot data to wide format
-y <- m %>% pivot_wider(names_from = Survey, values_from = Time, values_fill = NA)
+y <- m %>% pivot_wider(id_cols = Transect, names_from = Survey, values_from = Time, values_fill = NA)
 # check out resulting dataframe
 y
 
