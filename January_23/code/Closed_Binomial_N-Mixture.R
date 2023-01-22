@@ -285,7 +285,7 @@ plot(maxCount$Transect, maxCount$mean_estimate, pch=16, col="blue",
 points(maxCount$Transect, maxCount$Count, pch=16, col="black")
 legend(6, 33, c("Predicted abundance", "Maximum count"),
        col=c("blue", "black"), pch = 16)
-# QUESTION: Discuss the results of this figure as a group
+# Make sure you understand what's going on in the plot
 #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 # Let's fit a model that addresses our focal question (and hypothesis)
