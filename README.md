@@ -19,6 +19,12 @@ Please email **gbarrile@uwyo.edu** with any questions, comments, or requests.
 ### January 19
 [Abundance: Closed Binomial N-mixture Model in unmarked](https://youtu.be/1hjmTdIVEpY)
 
+### January 23
+[Coding Session: Closed Binomial N-mixture Model](https://youtu.be/07ML5QlUqKs)
+
+### January 24
+[Abundance: Open Binomial N-mixture Model in unmarked](https://youtu.be/XPonr16QYbw)
+
 ---
 
 ## Additional Instructions
