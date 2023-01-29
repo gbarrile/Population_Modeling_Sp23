@@ -381,14 +381,14 @@ summary(umf)
 
 # Let's fit the model
 (m1 <- pcountOpen(
-                  lambdaformula = ~ Agriculture, 
-                  gammaformula = ~ rain, 
-                  omegaformula = ~ 1, 
-                  pformula = ~ grasscover, 
+                  lambdaformula = ~ Agriculture, # initial abundance
+                  gammaformula = ~ rain, # population growth rate when dynamics = "trend" 
+                  omegaformula = ~ 1, # omega is not an estimated parameter when dynamics = "trend"
+                  pformula = ~ grasscover, # detection probability
                   data = umf, 
                   mixture = "P", 
                   K=200,
-                  dynamics = "trend")) 
+                  dynamics = "trend")) # specify the type of population dynamics / which model you want
 
 summary(m1)
 
@@ -498,7 +498,7 @@ bup(re, stat="mean")           # Posterior mean
 bup(re, stat="mode")           # Posterior mode
 confint(re, level=0.9) # 90% CI
 
-# Plots of abundance over time at a given site (probability distribution of abundances)
+# Plots of abundance over time at a given site (posterior distribution of abundances)
 plot(re, subset=site %in% c(1), xlim=c(0,150))
 plot(re, subset=site %in% c(7), xlim=c(0,150))
 # look at both sites together
