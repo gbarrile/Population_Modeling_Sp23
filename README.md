@@ -13,6 +13,9 @@ Please email **gbarrile@uwyo.edu** with any questions, comments, or requests.
   
 ## Video Lessons
 
+### Accessing Course Materials
+[Downloading Individual Folders from GitHub](https://youtu.be/nD1DptRuBeE)
+
 ### January 17
 [Course Introduction](https://www.youtube.com/watch?v=RXtEqS-WVo4)
   
