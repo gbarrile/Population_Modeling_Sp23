@@ -28,6 +28,12 @@ Please email **gbarrile@uwyo.edu** with any questions, comments, or requests.
 ### January 24
 [Abundance: Open Binomial N-mixture Model in unmarked](https://youtu.be/XPonr16QYbw)
 
+### January 30
+[Coding Session: Open Binomial N-mixture Model](https://youtu.be/JwBBbBfd5oQ)
+
+### January 31
+[Abundance: Closed Population Estimation in RMark](https://youtu.be/cwiyIY-4Ki0)
+
 ---
 
 ## Additional Instructions
