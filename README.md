@@ -34,6 +34,9 @@ Please email **gbarrile@uwyo.edu** with any questions, comments, or requests.
 ### January 31
 [Abundance: Closed Population Estimation in RMark](https://youtu.be/cwiyIY-4Ki0)
 
+### February 06
+[Coding Session: Closed Population Estimation in RMark](https://youtu.be/Gp4QtWbjTN0)
+
 ---
 
 ## Additional Instructions
