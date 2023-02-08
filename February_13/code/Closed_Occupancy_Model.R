@@ -128,7 +128,7 @@ y
 # unmarked only wants a matrix of detections
 C <- as.matrix(y[,2:ncol(y)])
 
-C # each island is a row (24 rows)
+C # each island is a row (28 rows)
 # each column indicates the survey at each island (six surveys at each island)
 
 # Quick aside, and let's take island 2 as an example. Because we detected brown tree snakes
