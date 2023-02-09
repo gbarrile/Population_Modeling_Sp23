@@ -37,6 +37,9 @@ Please email **gbarrile@uwyo.edu** with any questions, comments, or requests.
 ### February 06
 [Coding Session: Closed Population Estimation in RMark](https://youtu.be/Gp4QtWbjTN0)
 
+### February 08
+[Occupancy: Closed Occupancy Model in unmarked](https://youtu.be/wpYL3BfAVzQ)
+
 ---
 
 ## Additional Instructions
