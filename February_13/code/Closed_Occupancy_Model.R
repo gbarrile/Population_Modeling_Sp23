@@ -235,7 +235,7 @@ umf <- unmarkedFrameOccu(
 umf
 summary(umf)
 
-plot(umf, panels=4)
+plot(umf, panels=4) # shows detection history at each site
 
 #%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%#
 
