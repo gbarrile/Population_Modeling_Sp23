@@ -387,7 +387,7 @@ sum(bup(re, stat="mode"))
 
 # Goodness of fit test on detection history frequencies
 require(AICcmodavg)
-system.time( gof.boot <- mb.gof.test(m7, nsim = 1000) )
+system.time( gof.boot <- mb.gof.test(m7, nsim = 100) )
 gof.boot
 # p-value here suggests that we fail to reject the null (CANNOT conclude that
 # the observed data are statistically different from the expected values)
