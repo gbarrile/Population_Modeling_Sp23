@@ -40,6 +40,9 @@ Please email **gbarrile@uwyo.edu** with any questions, comments, or requests.
 ### February 08
 [Occupancy: Closed Occupancy Model in unmarked](https://youtu.be/wpYL3BfAVzQ)
 
+### February 13
+[Coding Session: Closed Occupancy Model in unmarked](https://youtu.be/HJXV3xsN5fA)
+
 ---
 
 ## Additional Instructions
