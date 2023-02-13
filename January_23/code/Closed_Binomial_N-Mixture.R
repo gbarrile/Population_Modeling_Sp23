@@ -27,8 +27,8 @@
 #%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%#
 # This script contains the following sections:
 # 1) Install and load packages
-# 2) Read-in input data
-# 3) Format input data for unmarked
+# 2) Read-in field data
+# 3) Format data for unmarked
 # 4) Fit Closed Binomial N-mixture models
 # 5) Prediction and plotting
 # 6) Goodness-of-fit

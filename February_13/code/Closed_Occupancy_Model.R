@@ -35,8 +35,8 @@
 #%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%#
 # This script contains the following sections:
 # 1) Install and load packages
-# 2) Read-in input data
-# 3) Format input data for unmarked
+# 2) Read-in field data
+# 3) Format data for unmarked
 # 4) Fit Closed (Static) Occupancy models
 # 5) Prediction and plotting
 # 6) Goodness-of-fit
@@ -56,12 +56,6 @@ if("unmarked" %in% rownames(installed.packages()) == FALSE) {
 }
 require(unmarked)
 
-# reshape to format data
-# if("reshape" %in% rownames(installed.packages()) == FALSE) {
-#   install.packages("reshape")
-# }
-# require(reshape)
-
 # tidyverse to format data
 if("tidyverse" %in% rownames(installed.packages()) == FALSE) {
   install.packages("tidyverse")
@@ -74,11 +68,8 @@ citation("unmarked")
 
 
 #%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%#
-# ---- 2) Read-in input data -----
+# ---- 2) Read-in field data -----
 #%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%#
-
-# Specify the path that contains the salamander count data (Salamander_Wildfire.csv) 
-# use setwd()
 
 # you will need to set working directory to where you saved the 'BrownTreeSnake_ForestCover.csv'
 setwd()
