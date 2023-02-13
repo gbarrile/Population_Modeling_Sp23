@@ -412,6 +412,18 @@ mrand <- occu(~ temp ~ forest + (1|region), data=umf)
 
 mrand
 
+# to predict you'll need re.form=NA
+range(forest)
+newdat <- data.frame(forest=90)
+predict(mrand, type="state", newdata=newdat, re.form = NA)
+
+# or specify the region
+unique(region)
+newdat <- data.frame(forest=90, region="NW")
+predict(mrand, type="state", newdata=newdat)
+
+newdat <- data.frame(forest=90, region="SW")
+predict(mrand, type="state", newdata=newdat)
 
 #%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%#
 # END
