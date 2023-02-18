@@ -50,7 +50,7 @@
 # Check if unmarked and tidyverse are installed.
 # If yes, load them.  If not, install, then load.
 
-# unmarked for fitting the Binomial N-mixture model
+# unmarked for fitting the Closed (Static) Occupancy Model
 if("unmarked" %in% rownames(installed.packages()) == FALSE) {
   install.packages("unmarked")
 }
