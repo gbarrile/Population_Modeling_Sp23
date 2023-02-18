@@ -98,7 +98,7 @@ df %>%
   data.frame()
 
 # So, it seems we have detection/nondetection data for mange on 26 wolves
-# We sampled each wolf four times per year for five years (2011-2015)
+# and we sampled each wolf four times per year for five years (2011-2015)
 
 #%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%#
 
@@ -306,7 +306,7 @@ confint(backTransform(m2, type="det"))
 
 # predictions for initial occupancy
 newdata <- data.frame(Region=c("North","South","West")) 
-predict(m2, type="psi", newdata=newdata)
+predict(m2, type="psi", newdata=newdata, appendData = TRUE)
 
 
 # plot covariate relationship with colonization probability and pack size
@@ -405,7 +405,7 @@ ggplot(predicted_occupancy,
 # Mackenzie-Bailey GOF test
 # Simulates detection history data (if model correct). Compare obs X2 to sim X2
 # Likely to take a Very Long Time on large data sets
-mb.boot <- AICcmodavg::mb.gof.test(m2, nsim = 10) # nsim should probably be at least 1000
+mb.boot <- AICcmodavg::mb.gof.test(m2, nsim = 100) # nsim should probably be at least 1000
 print(mb.boot, digit.vals = 4, digits.chisq = 4)
 
 # p-value here suggests that we fail to reject the null (CANNOT conclude that
