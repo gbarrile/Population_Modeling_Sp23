@@ -295,7 +295,7 @@ m2 <- colext(psiformula = ~ Region, # initial probability of occupancy
 # look at model summary
 summary(m2)
 
-# what was our detection probability from this model?
+# what was our detection probabilit from this model?
 backTransform(m2, type="det") 
 confint(backTransform(m2, type="det"))
 #%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%#
