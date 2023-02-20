@@ -46,10 +46,10 @@ Please email **gbarrile@uwyo.edu** with any questions, comments, or requests.
 ### February 16
 [Occupancy: Open Occupancy Model in unmarked](https://youtu.be/UdkdufBZqeY)
 
-### February 18
+### February 20
 [Coding Session: Open Occupancy Model in unmarked](https://youtu.be/EqG60b6mU_E)
 
-### February 19
+### February 21
 [Occupancy: Open Occupancy Model in RMark](https://youtu.be/8o-YBMgUXeQ)
 
 ---
