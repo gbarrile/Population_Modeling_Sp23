@@ -195,8 +195,12 @@ head(tern, 1)
 setup.model(model = "") # 91 models
 
 # As you can see, RMark includes lots of models that can be input into the model= argument below
-# Here we use the "Closed" model because we are interested in 
-# Closed Population Estimation for modeling Abundance
+# Here we use the "RDOccupEG" model because we are interested in 
+# estimating colonization and extinction probabilities in a dynamic occupancy framework.
+# RD in RDOccupEG stands for Robust Design
+# Occup in RDOccupEG denotes that it is an Occupancy Model
+# EG in RDOccupEG stands for Epsilon and Gamma
+# Epsilon is extinction probability and Gamma is colonization probability
 # Visit this link for a full list of MARK models supported in RMark:
 # https://github.com/jlaake/RMark/blob/master/RMark/inst/MarkModels.pdf
 
