@@ -58,6 +58,9 @@ Please email **gbarrile@uwyo.edu** with any questions, comments, or requests.
 ### February 28
 [Survival: Cormack-Jolly-Seber Model in RMark](https://youtu.be/zCTAR0dbq8U)
 
+### March 08
+[Coding Session: Cormack-Jolly-Seber Model in RMark](https://youtu.be/6dhmqiISXSg)
+
 ---
 
 ## Additional Instructions
