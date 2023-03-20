@@ -6,7 +6,7 @@ I will post a video lesson each week to introduce the topic that we will cover i
 
 ## Instructor
 [Gabriel Barrile](https://scholar.google.com/citations?user=lFpoeToAAAAJ&hl=en&oi=ao)
-Please email **gbarrile@uwyo.edu** with any questions, comments, or requests.
+(Please email **gbarrile@uwyo.edu** with any questions, comments, or requests.)
 
 [Molly Caldwell (Guest Lecturer)](http://mollyrcaldwell.com/)
 
