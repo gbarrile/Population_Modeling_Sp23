@@ -62,6 +62,9 @@ I will post a video lesson each week to introduce the topic that we will cover i
 ### March 08
 [Coding Session: Cormack-Jolly-Seber Model in RMark](https://youtu.be/6dhmqiISXSg)
 
+### March 20
+[Molly Caldwell Guest Lecture: Wildlife Camera Analysis](https://youtu.be/V51zn6rQrro)
+
 ---
 
 ## Additional Instructions
