@@ -65,6 +65,9 @@ I will post a video lesson each week to introduce the topic that we will cover i
 ### March 20
 [Molly Caldwell Guest Lecture: Wildlife Camera Analysis](https://youtu.be/V51zn6rQrro)
 
+### March 22
+[Survival: Robust Design with Temporary Emigration in RMark](https://youtu.be/T-w1xdMV4jQ)
+
 ---
 
 ## Additional Instructions
