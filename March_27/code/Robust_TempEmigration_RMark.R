@@ -375,7 +375,33 @@ S.ppt = list(formula=~ppt)
 # let's try some different structures for temporary emigration
 
 # We will compare models with no emigration, random emigration, and Markovian emigration
-# If temporary emigration is random, then GammaDoublePrime = GammaPrime
+
+# If temporary emigration is random, the probability of moving between availability states between primary 
+# occasions i and i+1 is independent of the previous state of the system, whereas for Markovian movement, 
+# the probability of moving between availability states between primary occasions i and i + 1 is 
+# conditional on the state of the individual at time i-1 
+
+# To obtain the ‘Random emigration’ model, set gamma prime equal to gamma double prime (share them in RMark). 
+# The interpretation is that the probability of temporarily emigrating from the observable sample during
+# an interval is the same as the probability of staying away (i.e., the probability of not immigrating back
+# into the observable sample). Biologically, the probability of being in the study area during the current
+# trapping session is the same for those animals previously in and those animals previously out of the
+# study area during the previous trapping session. In other words, 
+
+# To obtain the 'Markovian emigration' model, do NOT share gamma prime and gamma double prime. 
+# Rather, estimate different values for gamma prime and gamma double prime
+
+# IN OTHER WORDS, under random emigration, the probability of temporary emigration at time i 
+# would be the same regardless of whether an individual was present or absent from the study area at i - 1, 
+# such that gamma double prime = gamma prime. Under Markovian emigration, by contrast, 
+# an individual that is absent from the study area at i - 1 would have a different probability of 
+# temporary emigration at time i than an individual that was present in the study area at i - 1., such
+# that gamma double prime does NOT equal gamma prime and the gamma parameters are estimated separately.
+
+
+
+# Okay, let's proceed
+# Again, if temporary emigration is random, then GammaDoublePrime = GammaPrime
 d.ddl$GammaDoublePrime
 
 # Random Emigration (share the gamma parameters)
