@@ -68,6 +68,9 @@ I will post a video lesson each week to introduce the topic that we will cover i
 ### March 22
 [Survival: Robust Design with Temporary Emigration in RMark](https://youtu.be/T-w1xdMV4jQ)
 
+### March 27
+[Coding Session: Robust Design with Temporary Emigration in RMark](https://youtu.be/p83FnZ_Mykc)
+
 ---
 
 ## Additional Instructions
