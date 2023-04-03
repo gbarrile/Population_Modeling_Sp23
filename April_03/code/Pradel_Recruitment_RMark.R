@@ -66,7 +66,7 @@ if("tidyverse" %in% rownames(installed.packages()) == FALSE) {
 }
 require(tidyverse)
 
-# if you needed to cite the RMark package
+# if you need to cite the RMark package
 citation("RMark")
 #%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%#
 
