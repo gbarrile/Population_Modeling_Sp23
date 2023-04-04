@@ -71,6 +71,9 @@ I will post a video lesson each week to introduce the topic that we will cover i
 ### March 27
 [Coding Session: Robust Design with Temporary Emigration in RMark](https://youtu.be/p83FnZ_Mykc)
 
+### April 03
+[Introduction and Coding Session: Reverse-time Pradel Model for Survival, Recruitment, and Population Growth in RMark](https://youtu.be/g3YT3u6D86w)
+
 ---
 
 ## Additional Instructions
