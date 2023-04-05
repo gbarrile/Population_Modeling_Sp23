@@ -74,6 +74,9 @@ I will post a video lesson each week to introduce the topic that we will cover i
 ### April 03
 [Introduction and Coding Session: Reverse-time Pradel Model for Survival, Recruitment, and Population Growth in RMark](https://youtu.be/g3YT3u6D86w)
 
+### April 04
+[Multi-State Capture-Mark-Recapture Model in RMark](https://youtu.be/W5Vg90MMJjQ)
+
 ---
 
 ## Additional Instructions
