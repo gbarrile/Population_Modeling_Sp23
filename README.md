@@ -77,6 +77,9 @@ I will post a video lesson each week to introduce the topic that we will cover i
 ### April 04
 [Multi-State Capture-Mark-Recapture Model in RMark](https://youtu.be/W5Vg90MMJjQ)
 
+### April 12
+[Coding Session: Multi-State Capture-Recapture Model in RMark](https://youtu.be/-6TTkRxsuYg)
+
 ---
 
 ## Additional Instructions
